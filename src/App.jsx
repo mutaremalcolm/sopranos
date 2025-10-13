@@ -30,6 +30,7 @@ const familyTreeData = [
 const FamilyTree = ({data}) => {
   return (
     <div>
+      {data}
     </div>
   )
 }
