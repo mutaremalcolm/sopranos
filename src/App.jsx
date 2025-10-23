@@ -1,53 +1,50 @@
 import "./App.css";
 
-const FamilyTreeData = [
+const checkboxesData = [
      {
     id: 1,
-    name: "Parent 1",
+    name: "Fruits",
     children: [
-      { id: 2, label: "Child 1" },
-      { id: 3, label: "Child 2" },
+      { id: 2, name: "Apple" },
+      { id: 3, name: "Banana" },
       {
         id: 4,
-        name: "Parent 2",
+        name: "Citrus",
         children: [
-          { id: 5, name: "Child 1" },
-          { id: 6, name: "Child 2" },
+          { id: 5, name: "Orange" },
+          { id: 6, name: "Lemon" },
         ],
       },
     ],
   },
   {
     id: 7,
-    name: "Parent 3",
+    name: "Vegetables",
     children: [
-      { id: 8, name: "Child 1" },
-      { id: 9, name: "Child 2" },
+      { id: 8, name: "Carrot" },
+      { id: 9, name: "Broccoli" },
     ],
   },
 ];
 
-const FamilyTree = ({data}) => {
+const Checkboxes = ({data}) => {
   return (  
-    <div>
-      {data.map (node=> (
-         <div key="id"> 
+    <div key="id">
+      {data.map((node) => (
+         <div> 
           <input type="checkbox" />
-        <span>{node.name}</span>
-        {node.children &&  <FamilyTreeData data={node.children} />} 
+        <span>{node.name}</span> 
+        {node.children && <Checkboxes data={node.children} />}
         </div>
         ))}   
     </div>
-  )
-}
+  );
+};
   
 export default function App() {
   return (
     <div>
-      <h2>Soprano's Family Tree</h2>
-      <FamilyTree
-        data={FamilyTreeData}
-        />
+      <Checkboxes data={checkboxesData} />
     </div>
   )
 }
