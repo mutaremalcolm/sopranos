@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 
 const checkboxesData = [
      {
@@ -27,14 +28,25 @@ const checkboxesData = [
   },
 ];
 
-const Checkboxes = ({data}) => {
+const Checkboxes = ({data, checked, setChecked}) => { 
+
+  const handleChange = (e, id) => {
+    setChecked((prev) => {
+      const newState = {...prev,[id]: e.target.checked }
+      return newState;  
+    })
+  }
   return (  
     <div key="id">
       {data.map((node) => (
-         <div> 
-          <input type="checkbox" />
+         <div className="parent" key={node.id}> 
+          <input 
+            type="checkbox" 
+            checked={checked[node.id ] || false} 
+            onChange={e=> handleChange(e, node.id)}
+            />
         <span>{node.name}</span> 
-        {node.children && <Checkboxes data={node.children} />}
+        {node.children && <Checkboxes data={node.children} checked={checked} setChecked={setChecked}/>}
         </div>
         ))}   
     </div>
@@ -42,9 +54,14 @@ const Checkboxes = ({data}) => {
 };
   
 export default function App() {
+  const [checked, setChecked] = useState({ 1: true })
   return (
     <div>
-      <Checkboxes data={checkboxesData} />
+      <Checkboxes 
+        data={checkboxesData} 
+        checked={checked} 
+        setChecked={setChecked} 
+        />
     </div>
   )
 }
