@@ -36,10 +36,6 @@ const checkboxesData = [
       {
         id: 11,
         name: "Parent 4",
-        children: [
-          { id: 12, name: "Child 9" },
-          { id: 13, name: "Child 10" },
-        ],
       },
     ],
   },
