@@ -2,7 +2,7 @@
 <div align="center">
     <h1>Sopranos</h1>
     <h6>
-        Built with <a href="https://vite.dev/">Next.js</a> &
+        Built with <a href="https://vite.dev/">Vite.js</a> &
         hosted by <a href="https://vercel.com/">Vercel</a> 
     </h6>
     <h4>
