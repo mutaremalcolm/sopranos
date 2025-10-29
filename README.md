@@ -1,69 +1,37 @@
-# React + TypeScript + Vite
+<!-- Headings -->
+<div align="center">
+    <h1>Sopranos</h1>
+    <h6>
+        Built with <a href="https://vite.dev/">Next.js</a> &
+        hosted by <a href="https://vercel.com/">Vercel</a> 
+    </h6>
+    <h4>
+      <a href="https://sopranos-virid.vercel.app/" target="_blank">
+        🔗 Demo Website
+      </a>
+    </h4>
+    <hr>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# **Introduction**
+**Sopranos** (yes, a play on the famous TV Series) is a small react project that shows how state management can be implemented **use state is key**. This project was an exciting opportunity to work with a **a tree data structure** and recursion. 
 
-Currently, two official plugins are available:
+The application solves the presented problem by using recursion to traverse a data tree structure **Reverse Traversal**, but to also enable tracking of selected children nodes in relation to their parent nodes i had to implement reverse tree traversal.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## **Project Goals**
+1. **Tree Data Structure**
+   - Work with **Tree Data Structure** to get my hands dirty and refresh my DSA knowledge.
+   - Also implement reverse tree travesal.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Recursion**
+   - Approach problem solving by using recursion **AQI levels** in a user-friendly gauge format.
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## **Tech Stack**
+- **Framework**: Vite (React-based)
+- **Styling**: Raw CSS
+- **Hosting**: Vercel
+- **State Management**: React Hooks (useState)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```

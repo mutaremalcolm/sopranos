@@ -4,26 +4,42 @@ import { useState } from "react";
 const checkboxesData = [
      {
     id: 1,
-    name: "Fruits",
+    name: "Parent 1",
     children: [
-      { id: 2, name: "Apple" },
-      { id: 3, name: "Banana" },
-      {
-        id: 4,
-        name: "Citrus",
+      { id: 2, 
+        name: "Parent 2",
         children: [
-          { id: 5, name: "Orange" },
-          { id: 6, name: "Lemon" },
+         { 
+          id: 3, 
+          name: "Child 1" 
+        },
+        { 
+          id: 4, 
+          name: "Child 2" 
+        },
+        { id: 5, 
+        name: "Child 3",
+        children: [
+          { id: 6, 
+            name: "Child 4" 
+          },
+          { id: 7,
+            name: "Child 5"
+          },
         ],
       },
-    ],
-  },
-  {
-    id: 7,
-    name: "Vegetables",
-    children: [
-      { id: 8, name: "Carrot" },
-      { id: 9, name: "Broccoli" },
+        ] },
+      { id: 8, 
+        name: "Parent 3",
+        children: [
+          { id: 9, name: "Child 6" },
+          { id: 10, name: "Child 7"},
+        ],
+      },
+      {
+        id: 11,
+        name: "Parent 4",
+      },
     ],
   },
 ];
