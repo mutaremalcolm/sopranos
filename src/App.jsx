@@ -20,17 +20,20 @@ const checkboxesData = [
         { id: 5, 
         name: "Child 3",
         children: [
-          { id: 6, name: "Child 5" },
-          { id: 7, name: "Child 6"},
+          { id: 6, 
+            name: "Child 4" 
+          },
+          { id: 7,
+            name: "Child 5"
+          },
         ],
       },
         ] },
-      
       { id: 8, 
         name: "Parent 3",
         children: [
-          { id: 9, name: "Child 7" },
-          { id: 10, name: "Child 8"},
+          { id: 9, name: "Child 6" },
+          { id: 10, name: "Child 7"},
         ],
       },
       {
