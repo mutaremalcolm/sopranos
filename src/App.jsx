@@ -61,10 +61,10 @@ const Checkboxes = ({ data, checked, setChecked }) => {
       const verifyChecked = (node) => {
         if(!node.children) return newState[node.id] || false
 
-        const allChildrenChecked = node.children.every((child) =>
-          verifyChecked(child)
-        );
-
+        const childResults = node.children.map((child) => verifyChecked(child))
+        
+        const allChildrenChecked = childResults.every(result => result) 
+      
         newState[node.id] = allChildrenChecked;
         return allChildrenChecked
       }
